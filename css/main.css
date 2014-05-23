@@ -1,0 +1,855 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Responsive Resets
+-------------------------------------------------------------- */
+
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+
+html {
+  overflow-y: auto;
+}
+
+img,
+audio,
+video,
+canvas {
+  max-width: 100%;
+}
+
+/* Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+For best results, use your favorite clearfix here.
+-------------------------------------------------------------- */
+.cf:before, .cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+.cf { zoom:1; } /* For IE 6/7 (trigger hasLayout) */
+
+/* Typography
+-------------------------------------------------------------- */
+
+@font-face {	
+	font-family: 'LeagueGothicRegular';
+    src: url('fonts/League_Gothic-webfont.eot');
+    src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/League_Gothic-webfont.woff') format('woff'),
+         url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {	
+	font-family: 'EntypoSocial';
+    src: url('fonts/entypo-social.eot');
+    src: url('fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
+         url('fonts/entypo-social.woff') format('woff'),
+         url('fonts/entypo-social.ttf') format('truetype'),
+         url('fonts/entypo-social.svg#EntypoSocial') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+::selection {
+	background: #222222;
+}
+
+::-moz-selection {
+	background: #222222;
+} 
+
+/* Layout
+-------------------------------------------------------------- */
+body {
+  font: 100%/1.5 'Glegoo', Arial, sans-serif;
+  color: #b0813d;
+  text-rendering: optimizelegibility;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-text-size-adjust: none;
+  -moz-font-smoothing: antialiased;
+  -ms-text-size-adjust: none;
+  -ms-font-smoothing: antialiased;
+}
+
+input[type="text"],
+input[type="email"] {
+	border: 1px solid #333333;
+	font-family: 'Glegoo', Arial, sans-serif;
+	font-size: 1em;
+	color: #b0813d;
+	padding: .3em;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.30s ease-in-out;
+  	-moz-transition: all 0.30s ease-in-out;
+  	-ms-transition: all 0.30s ease-in-out;
+  	-o-transition: all 0.30s ease-in-out;
+  	outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    box-shadow: 0 0 5px rgba(176, 129, 61, .5);
+    border: 1px solid rgba(176, 129, 61, .5);
+}
+
+::-webkit-input-placeholder {
+   color: #b0813d
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #b0813d  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #b0813d  
+}
+
+:-ms-input-placeholder {  
+   color: #b0813d;  
+}
+
+input[type="submit"] {
+	border: none;
+	background: none;
+	font-family: 'Yellowtail', Georgia, serif;
+	font-size: 1.375em;
+	color: #b0813d;
+	/*padding: .5em;*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+	transform:rotate(-4deg);
+	-ms-transform:rotate(-4deg); /* IE 9 */
+	-webkit-transform:rotate(-4deg); /* Safari and Chrome */
+}
+
+input[type="submit"]:hover {
+	opacity: 0.5;
+}
+
+strong {
+	font-weight: bold;
+}
+
+/* Header
+-------------------------------------------------------------- */
+
+header {
+	background: #222222;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	/*border-bottom: 3px solid #000000;*/
+}
+
+header h1 {
+	float: left;
+	text-transform: uppercase;
+	font-family: 'LeagueGothicRegular', Arial, sans-serif;
+	font-size: 2em;
+	height: 100%;
+}
+
+a#logo:hover {
+	opacity: .9;
+}
+
+.logo-symbol {
+	float: left;
+	width: 84px;
+	height: 50px;
+	background: #b0813d url(images/logo-symbol.png) 50% 50% no-repeat;
+	-webkit-background-size: 74px 40px;
+	-moz-background-size: 74px 40px;
+	-o-background-size: 74px 40px;
+	background-size: 74px 40px;
+}
+
+.logo-symbol img {
+	height: 0;
+}
+
+.logo-text {
+	float: left;
+	margin: 0 0 0 .5em;
+	line-height: 50px;
+}
+
+header a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#nav {
+	float: right;
+	display: none;
+}
+
+#mob-nav {
+	float: left;
+	width: 100%;
+	display: none;
+}
+
+#show-nav {
+	float: right;
+	height: 50px;
+	line-height: 50px;
+	margin-right: 1em;
+	cursor: pointer;
+}
+
+#show-nav span {
+	background: url(images/nav-icon.png) 0 50% no-repeat;
+	-webkit-background-size: 22px 17px;
+	-moz-background-size: 22px 17px;
+	background-size: 22px 17px;
+	width: 22px;
+	display: block;
+	text-indent: -9999px;
+}
+
+#nav li,
+#mob-nav li {
+	float: left;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-left: 1px solid #333333;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#mob-nav li {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	border-top: 1px solid #333333;
+	border-left: none;
+}
+
+#nav li a,
+#mob-nav li a {
+	display: block;
+	padding: 0 2em;
+	margin: 0;
+	line-height: 50px;
+}
+
+#nav li a:hover,
+#mob-nav li a:hover {
+	background: #333333;
+	/*color: #222222;*/
+	opacity: 1;
+}
+
+/* Content
+-------------------------------------------------------------- */
+
+/* Offset */
+#top,
+#story,
+#dealers,
+#grams,
+#contact { 
+	padding-top: 49px;
+	margin-top: -49px;
+}
+
+.product-info {
+	display: none;
+}
+
+a.product-mobile {
+	height: 200px;
+	display: block;
+	background: url(images/league-snapbacks.jpg) 50% 50% no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-align: center;
+}
+
+a.product-mobile:hover {
+	opacity: 1;
+}
+
+a.product-mobile.first {
+	margin-top: 50px;
+}
+
+a.product-mobile.league-snapback {
+	background-image: url(images/league-snapbacks.jpg);
+}
+
+a.product-mobile.las-5panel {
+	background-image: url(images/lost-at-sea-5panel.jpg);
+}
+
+a.product-mobile.las-beltloop {
+	background-image: url(images/lost-at-sea-beltloop.jpg);
+}
+
+a.product-mobile.mfg-blk-beanie {
+	background-image: url(images/mfg-blk-beanie.jpg);
+}
+
+a.product-mobile.league-blk-snapback {
+	background-image: url(images/league-blk-snapback.jpg);
+}
+
+a.product-mobile.mfg-maroon-5panel {
+	background-image: url(images/mfg-maroon-5panel.jpg);
+}
+
+a.product-mobile.mfg-maroon-beanie {
+	background-image: url(images/mfg-maroon-beanie.jpg);
+}
+
+a.product-mobile span {
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	padding: .5em 1em;
+	font-family: 'LeagueGothicRegular', Arial, sans-serif;
+	font-size: 1.8em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 200px;
+}
+
+a.product-mobile span:hover {
+	background: #ffffff;
+	color: #b0813d;
+}
+
+#story .inside,
+#dealers .inside {
+	width: 100%;
+	padding: 3em 2em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#story div,
+#dealers div {
+	float: left;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#story div p{
+	margin: 0 0 1em 0;
+	line-height: 1.8;
+}
+
+#dealers div ul {
+	line-height: 1.8;
+}
+
+#dealers a:hover {
+	opacity: 0.5;
+}
+
+#story h2,
+#dealers h2,
+#grams h2 {
+	font-family: 'Yellowtail', Georgia, serif;
+	font-size: 2.5em;
+	margin: 0;
+	float: left;
+}
+
+.quote {
+	font-family: 'Yellowtail', Georgia, serif;
+	font-size: 1.875em;
+	line-height: 1em;
+	display: block;
+	padding: .5em 0;
+}
+
+.name {
+	font-family: 'Yellowtail', Georgia, serif;
+	font-size: 1.5em;
+}
+
+/* Grams
+-------------------------------------------------------------- */
+
+#grams {
+	position: relative;
+}
+
+#grams-header {
+	float: left;
+	width: 100%;
+}
+
+.follow {
+	font-family: 'Glegoo', Arial, sans-serif;
+	font-size: .7em;
+	text-transform: lowercase;
+	letter-spacing: normal;
+}
+
+.instagram img {
+	float: left;
+	width: 50%
+}
+
+/* Footer
+-------------------------------------------------------------- */
+
+footer {
+	background: #222222;
+}
+
+footer a {
+	color: #b0813d;
+	text-decoration: none;
+}
+
+footer a:hover {
+	opacity: .5;
+}
+
+footer div {
+	float: left;
+	width: 100%;
+	height: 150px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+footer div.no-border {
+	border: none;
+}
+
+footer h2 {
+	font-family: 'LeagueGothicRegular', Arial, sans-serif;
+	font-size: 1.25em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	padding: .3em .8em;
+}
+
+footer p {
+	padding: .6em 1em;
+}
+
+footer input[type="text"],
+footer input[type="email"] {
+	background: #222222;
+}
+
+footer input[type="submit"] {
+	margin-left: .3em;
+}
+
+#social {
+	width: 100%;
+	font-family: 'EntypoSocial';
+	font-size: 3em;
+}
+
+#social li {
+	float: left;
+	width: 25%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-right: 1px solid #333333;
+}
+
+#social li:last-child {
+	border: none;
+}
+
+#social li a {
+	display: block;
+	text-align: center;
+	line-height: 106px;
+}
+
+#social li a:hover {
+	background: #333333;
+	opacity: 1;
+}
+
+/* Tablet */
+@media screen and (min-width: 850px) {
+	
+/* Product
+-------------------------------------------------------------- */
+	
+a.product-mobile {
+	height: 400px;
+}
+
+a.product-mobile span {
+	line-height: 400px;
+}
+
+/* Dealers
+-------------------------------------------------------------- */
+
+#dealers div {
+	width: 33.333%;
+}
+
+/* Instagram
+-------------------------------------------------------------- */
+
+.instagram img {
+	width: 25%
+}
+
+/* Footer
+-------------------------------------------------------------- */
+
+footer div {
+	width: 50%;
+	border-right: 1px solid #333333;
+}
+	
+}
+
+/* Screen */
+@media screen and (min-width: 1026px) {
+	
+#nav {
+	display: inherit;
+}
+
+#mob-nav,
+#show-nav {
+	display: none;
+}
+
+/* Products
+-------------------------------------------------------------- */
+
+.background {
+	background: url(images/lost-at-sea-5panel.jpg) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 900px;
+}
+
+a.product-mobile {
+	display: none;
+}
+
+.slide {
+	background-attachment: fixed;
+}
+
+
+.ant-joe-intro {
+	background-image: url(../images/IMG_4217.jpg);
+}
+
+.shibuya-hachiko-exit {
+	background-image: url(../images/IMG_3973.jpg);
+}
+
+.shibuya-center-gai {
+	background-image: url(../images/IMG_3977.jpg);
+}
+.shibuya-bunkamura {
+	background-image: url(../images/IMG_3980.jpg);
+}
+.shibuya-sidewalk {
+	background-image: url(../images/IMG_3981.jpg);
+}
+.shibuya-at-dusk {
+	background-image: url(../images/IMG_3989.jpg);
+}
+.freshness-burger {
+	background-image: url(../images/IMG_3990.jpg);
+}
+.shibuya-evening {
+	background-image: url(../images/IMG_3998.jpg);
+}
+.crowded-train {
+	background-image: url(../images/IMG_4009.jpg);
+}
+.inside-the-train {
+	background-image: url(../images/IMG_4014.jpg);
+}
+.oshiage-river {
+	background-image: url(../images/IMG_4019.jpg);
+}
+.yasukuni-jinja {
+	background-image: url(../images/IMG_4039.jpg);
+}
+.yasukuni-park {
+	background-image: url(../images/IMG_4060.jpg);
+}
+.tsukuda-farm-itoshida {
+	background-image: url(../images/IMG_4069.jpg);
+}
+.tsukuda-farm {
+	background-image: url(../images/IMG_4073.jpg);
+}
+.tsukuda-farm-antjoe {
+	background-image: url(../images/IMG_4075.jpg);
+}
+.taxi {
+	background-image: url(../images/IMG_4077.jpg);
+}
+.golden-gai {
+	background-image: url(../images/IMG_4090.jpg);
+}
+
+.league-snapback {
+	background-image: url(images/league-snapbacks.jpg);
+}
+
+.las-5panel {
+	background-image: url(images/lost-at-sea-5panel.jpg);
+}
+
+.las-beltloop {
+	background-image: url(images/lost-at-sea-beltloop.jpg);
+}
+
+.mfg-blk-beanie {
+	background-image: url(images/mfg-blk-beanie.jpg);
+}
+
+.league-blk-snapback {
+	background-image: url(images/league-blk-snapback.jpg);
+}
+
+.mfg-maroon-5panel {
+	background-image: url(images/mfg-maroon-5panel.jpg);
+}
+
+.mfg-maroon-beanie {
+	background-image: url(images/mfg-maroon-beanie.jpg);
+}
+
+.price,
+.details {
+	display: inherit;
+}
+
+.product-info {
+	display: inherit;
+	float: left;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin: 0;
+	letter-spacing: 1px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.product-info h2 {
+	font-family: 'LeagueGothicRegular', Arial, sans-serif;
+	font-size: 2.5em;
+	letter-spacing: 5px;
+	padding: .1em 1em;
+	text-align: center;
+}
+
+.product-info {
+	float: left;
+	border: 2px solid #FFFFFF;
+	margin: 19em 0 0 84px;
+	width: 350px;
+}
+
+.right {
+	float: right;
+	margin-right: 84px;
+	margin-left: 0;
+}
+
+.price {
+	float: left;
+	width: 40%;
+	height: 100px;
+	text-align: center;
+	line-height: 1.6em;
+	border-right: 2px solid #222222;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 1.5em;
+}
+
+.price strong {
+	width: 100%;
+	display: inline-block;
+	font-family: 'Yellowtail', Georgia, serif;
+	font-size: 2.2em;
+	letter-spacing: 0;
+}
+
+.price span {
+	width: 100%;
+	display: inline-block;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
+.title {
+	float: right;
+	width: 60%;
+	height: 50px;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 50px;
+	letter-spacing: 2px;
+	border-bottom: 1px solid #222222;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a.details {
+	float: right;
+	width: 60%;
+	height: 50px;
+	background: #222222;
+	color: #b0813d;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a.details:hover {
+	background: #333333;
+	opacity: 1;
+}
+
+/* Story & Dealers
+-------------------------------------------------------------- */
+
+#story,
+#dealers {
+	padding-right: 84px;
+	padding-left: 84px;
+}
+
+#story .inside,
+#dealers .inside {
+	padding: 5em 0;
+}
+	
+#story div,
+#dealers div {
+	width: 33.3333333%;
+}
+
+#story div p,
+#dealers div ul {
+	margin: 0 1em 1em 0;
+}
+
+/* Instagram
+-------------------------------------------------------------- */
+
+.instagram img {
+	float: left;
+	width: 20%
+}
+
+.instagram img:hover {
+	opacity: 1;
+}
+
+/* Footer
+-------------------------------------------------------------- */
+
+footer div {
+	width: 25%;
+	border-right: 1px solid #333333;
+}
+
+footer h2 { 
+	border-top: none;
+}
+	
+}
